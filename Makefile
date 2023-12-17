@@ -7,6 +7,7 @@ install-git:
 	@git config --global alias.ci "commit -m"
 	@git config --global alias.st status
 	@git config --global alias.nb "checkout -b"
+	@git config --global alias.fp "fetch --prune"
 	@git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 	@echo "Git aliases have been set up."
 
@@ -19,6 +20,7 @@ uninstall-git:
 	@git config --global --unset alias.ci
 	@git config --global --unset alias.st
 	@git config --global --unset alias.nb
+	@git config --global --unset alias.fp
 	@git config --global --unset alias.lg
 	@echo "Git aliases have been removed."
 
@@ -29,4 +31,3 @@ uninstall:
 	make uninstall-git
 
 .PHONY: install uninstall
-
